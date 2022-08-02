@@ -68,7 +68,7 @@
         
               
 
-		map.on('draw:created', gerard);
+		map.on('draw:created', writemapchange);
         
 		
         
@@ -76,13 +76,13 @@ L.control.scale({ maxWidth: 150 }).addTo(map);
 
 }
 
-function gerard (e){
-                console.log('gerard called')
+function writemapchange (e){
+                console.log('writemapchange called')
 			var type = e.layerType,
 				layer = e.layer;
 
 			if (type === 'marker') {
-				layer.bindPopup('A popup!');
+				layer.bindPopup('Custom marker');
 			}
 
 			drawnItems.addLayer(layer);
