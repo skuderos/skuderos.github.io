@@ -1,5 +1,5 @@
     function setmap(){
-        var map = L.map('map').setView([52.2414287, 6.05244], 14);
+            var map = L.map('map').setView([52.2414287, 6.05244], 14);
         mapLink = 
             '<a href="http://openstreetmap.org">OpenStreetMap</a>';
         L.tileLayer(
@@ -66,17 +66,7 @@
 		});
 		map.addControl(drawControl);
         
-              
-
-		map.on('draw:created', gerard);
-        
-		
-        
-L.control.scale({ maxWidth: 150 }).addTo(map);
-
-}
-
-function gerard (e){
+                function gerard (e){
                 console.log('gerard called')
 			var type = e.layerType,
 				layer = e.layer;
@@ -86,4 +76,13 @@ function gerard (e){
 			}
 
 			drawnItems.addLayer(layer);
+		}
+
+		map.on('draw:created', gerard);
+        
+		
+        
+L.control.scale({ maxWidth: 150 }).addTo(map);
+
+    
 		}
