@@ -95,7 +95,6 @@ map.on('draw:editvertex', function(e) {
     for (thisLayer in e.target._layers) {
         if (e.target._layers.hasOwnProperty(thisLayer)) {
             if (e.target._layers[thisLayer].hasOwnProperty("edited")) {
-                console.log("I think I found the polyline");
                 console.log(e.target._layers[thisLayer]);
 
                 // the updated Polyline array points are here:
