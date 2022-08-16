@@ -16,7 +16,7 @@ const userdata = [];
 
 userdata.push(username_guest);
 userdata.push(username_admin);
-
+let usernamegiven = "guest";
 
 //function that sets the current search key and retrieves the object
 function userreadtest(){
