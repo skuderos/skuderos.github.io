@@ -72,7 +72,6 @@ function sha256register() {
 
 let givenpasswordreg = document.querySelector('[data-id="pwregist"]').value;
 let givenusernamereg = document.querySelector('[data-id="userregist"]').value;
-console.log(givenusernamereg);
 let givenemail = document.querySelector('[data-id="emailregist"]').value;
 let hashHexreg=sha256(givenpasswordreg);
 
