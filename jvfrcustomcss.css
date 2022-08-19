@@ -1,0 +1,492 @@
+/* wat dingen over polylines en SVG die nodig zijn om de draw functies te laten werken. ESSENTIEEL voor leaflet*/
+
+.polyline-stroke {
+  stroke: orange;
+  fill: none;
+  stroke-dasharray: 10,10;
+  stroke-width: 5;
+  svg {
+height: 30px,
+width: 30px
+}
+.custom-title-text-j {
+color: #18488;
+font-size: 20px;
+font-weight: bold
+}
+
+}
+
+svg {
+    position: absolute;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+/* styling voor de buttonwithhover die ik gebruik bij navlog en send*/
+
+.buttonwithhover {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3e8e41;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 140px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonwithhover span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonwithhover span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonwithhover:hover span {
+  padding-right: 25px;
+}
+
+.buttonwithhover:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonwithhover:active {
+  background-color: #19381a;
+  transform: translateY(4px);
+
+}
+
+/* styled table voor het weer CSS */
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 70%;
+    max-width: 100%;
+    box-shadow:
+  0.1px 0.1px 1.6px rgba(0, 0, 0, 0.008),
+  0.3px 0.3px 3.9px rgba(0, 0, 0, 0.012),
+  0.6px 0.6px 7.3px rgba(0, 0, 0, 0.015),
+  1.1px 1.1px 13px rgba(0, 0, 0, 0.018),
+  2.1px 2.1px 24.2px rgba(0, 0, 0, 0.022),
+  5px 5px 58px rgba(0, 0, 0, 0.03)
+;
+}
+
+.styled-table thead tr {
+    background-color: #191532;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+text-align: center;
+    padding: 5px 8px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #191532;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #191532;
+}
+
+.styled-table tbody td.ifr-data {
+    font-weight: bold;
+    color: #eb3434;
+}
+
+.styled-table tbody td.depart-data {
+    font-weight: bold;
+}
+
+.styled-table tbody td.mvfr-data {
+    font-weight: bold;
+    color: #3d34eb;
+}
+
+.styled-table tbody td.vfr-data {
+    font-weight: bold;
+    color: #3E8E41;
+}
+
+.styled-table tbody td.unknown-data {
+    font-weight: bold;
+    color: #A0A0A0;
+}
+
+/* styled table voor mass and balance CSS */
+
+.styled-tablemb {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 0%;
+    max-width: 100%;
+    box-shadow:
+  0.1px 0.1px 1.6px rgba(0, 0, 0, 0.008),
+  0.3px 0.3px 3.9px rgba(0, 0, 0, 0.012),
+  0.6px 0.6px 7.3px rgba(0, 0, 0, 0.015),
+  1.1px 1.1px 13px rgba(0, 0, 0, 0.018),
+  2.1px 2.1px 24.2px rgba(0, 0, 0, 0.022),
+  5px 5px 58px rgba(0, 0, 0, 0.03);
+
+}
+
+.styled-tablemb thead tr {
+    background-color: #191532;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-tablemb th,
+.styled-tablemb td {
+text-align: left;
+    padding: 10px 16px;
+}
+
+.styled-tablemb tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-tablemb tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-tablemb tbody tr:last-of-type {
+    border-bottom: 2px solid #191532;
+}
+
+.styled-tablemb tbody tr.active-row {
+    font-weight: bold;
+    color: #191532;
+}
+
+.styled-tablemb tbody td.centeredbold {
+    font-weight: bold;
+    text-align: center;
+    color: #eb3434;
+}
+
+.styled-tablemb tbody td.simplebold {
+    font-weight: bold;
+    background: #f5db95;
+}
+.styled-tablemb tbody td.simplebold2 {
+    font-weight: bold;
+}
+
+.styled-tablemb tbody td.allgood {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background: #068000;
+   }
+
+   .styled-tablemb tbody td.notgood {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background: #9e1102;
+   }
+
+.styled-tablemb tbody td.vfr-data {
+    font-weight: bold;
+    color: #3E8E41;
+}
+
+.styled-tablemb tbody td.unknown-data {
+    font-weight: bold;
+    color: #A0A0A0;
+}
+
+/* styled table voor fuel calculation CSS */
+
+.styled-tableft {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 0%;
+    max-width: 100%;
+    box-shadow:
+  0.1px 0.1px 1.6px rgba(0, 0, 0, 0.008),
+  0.3px 0.3px 3.9px rgba(0, 0, 0, 0.012),
+  0.6px 0.6px 7.3px rgba(0, 0, 0, 0.015),
+  1.1px 1.1px 13px rgba(0, 0, 0, 0.018),
+  2.1px 2.1px 24.2px rgba(0, 0, 0, 0.022),
+  5px 5px 58px rgba(0, 0, 0, 0.03);
+
+}
+
+.styled-tableft thead tr {
+    background-color: #191532;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-tableft th,
+.styled-tableft td {
+text-align: left;
+    padding: 10px 16px;
+}
+
+.styled-tableft tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-tableft tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-tableft tbody tr:last-of-type {
+    border-bottom: 2px solid #191532;
+}
+
+.styled-tableft tbody tr.active-row {
+    font-weight: bold;
+    color: #191532;
+}
+
+.styled-tableft tbody td.centeredbold {
+    font-weight: bold;
+    text-align: center;
+    color: #eb3434;
+}
+
+.styled-tableft tbody td.simplebold {
+    font-weight: bold;
+    background: #f5db95;
+}
+.styled-tableft tbody td.simplebold2 {
+    font-weight: bold;
+}
+.styled-tableft tbody td.simplebold3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.styled-tableft tbody td.allgood {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background: #068000;
+   }
+
+   .styled-tableft tbody td.notgood {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background: #9e1102;
+   }
+
+.styled-tableft tbody td.tabletitle {
+    font-weight: bold;
+}
+
+.styled-tableft tbody td.fuelused {
+    color: #9e1102;
+}
+.styled-tableft tbody td.fueladded {
+    color: #068000;
+}
+
+/* styling voor de buttonwithhover die ik gebruik bij login*/
+
+.buttonwithhoverlogin {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3e8e41;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonwithhoverlogin span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonwithhoverlogin span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonwithhoverlogin:hover span {
+  padding-right: 25px;
+}
+
+.buttonwithhoverlogin:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonwithhoverlogin:active {
+  background-color: #19381a;
+  transform: translateY(4px);
+
+}
+
+/* styling voor de buttonwithhover die ik gebruik bij registration*/
+
+.buttonwithhoverregist {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #8a3a3e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonwithhoverregist span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonwithhoverregist span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonwithhoverregist:hover span {
+  padding-right: 25px;
+}
+
+.buttonwithhoverregist:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.buttonwithhoverregist:active {
+  background-color: #19381a;
+  transform: translateY(4px);
+
+}
+
+.modalreg {
+  display: none;
+  position: fixed;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalreg-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  width: 75%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.close-btn {
+  float: right;
+  color: lightgray;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: darkgray;
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Styling for new here text */
+.newheretext{
+  background-color: #FFFFFF;
+  color: #2F2F30;
+  font-weight: bold;
+  font-size: 30px;
+}
+/*styling voor custom input die moet lijken op die van molnify*/
+.customjordie-input {
+  border-style:solid;
+  font-size:14px;
+  padding:7px;
+  border-radius:7px;
+  color:#a3a6a8;
+  border-color:#e4e9ec;
+  border-width:2px;
+}
+.customjordie-input:focus {
+  border-style:solid;
+  font-size:14px;
+  padding:7px;
+  border-radius:7px;
+  color:#a3a6a8;
+  border-color:#A3A6A8;
+  border-width:2px;
+}
