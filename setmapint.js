@@ -132,5 +132,4 @@ console.log(waypointlatlng);
 // add scale to map
 L.control.scale({ maxWidth: 150 }).addTo(map);
 
-
 }
