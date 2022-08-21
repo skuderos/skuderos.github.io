@@ -16,6 +16,10 @@ var esrimap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/
     attribution: 'ESRI'
 });
 
+var aeromap = L.tileLayer('http://77.169.232.101:8080/ehaa_256/map//{z}/{y}/{x}', {
+    maxZoom: 19,
+});
+
 var map = L.map('map', {
 fullscreenControl: true,
 center: [52.2414287, 6.0524422],
@@ -24,8 +28,10 @@ center: [52.2414287, 6.0524422],
 });
 
 var baseMaps = {
+    "VFR map":aeromap,
     "Map": osm,
     "Satellite": esrimap
+
 };
 
 var layerControl = L.control.layers(baseMaps).addTo(map);
