@@ -17,7 +17,7 @@ var esrimap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/
 });
 
 var aeromap = L.tileLayer('http://77.169.232.101:8080/ehaa_256/map/#{z}/{y}/{x}', {
-    maxZoom: 19,
+    maxZoom: 11,
 });
 
 var map = L.map('map', {
