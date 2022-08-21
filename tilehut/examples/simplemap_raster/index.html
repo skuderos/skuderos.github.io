@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>Tilehut.js Raster Tiles Demo</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+
+<body>
+	<div id='map'></div>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script type="text/javascript">
+		// create a map in the "map" div, set the view to a given place and zoom
+		var map = L.map('map').setView([0, 0], 3);
+
+		// add a tileset layer
+		L.tileLayer('http://0.0.0.0:8000/tiles-world-simple/{z}/{x}/{y}.png').addTo(map);
+	</script>
+</body>
+</html>
