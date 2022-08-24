@@ -16,25 +16,58 @@ var esrimap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/
     attribution: 'ESRI'
 });
 
-var aeromap = L.tileLayer('http://77.169.232.101:8080/ehaa_256/map/#{z}/{y}/{x}', {
-    maxZoom: 11,
+var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 });
+
+var thundertransport = L.tileLayer('https://b.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=a922d740113b40cf80a36f6aabe5affc'
+);
+
+//declaring every tile source for openAIP
+
+var aeromap = L.tileLayer('https://api.tiles.openaip.net/api/data/airspaces/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+var aeroreporting_points = L.tileLayer('https://api.tiles.openaip.net/api/data/reporting-points/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+var aeroairports = L.tileLayer('https://api.tiles.openaip.net/api/data/airports/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+//ongebruikte tiles 
+
+//var aerohotspots = L.tileLayer('https://api.tiles.openaip.net/api/data/hotspots/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+//var aeroobstacles = L.tileLayer('https://api.tiles.openaip.net/api/data/obstacles/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+//var aerogliders = L.tileLayer('https://api.tiles.openaip.net/api/data/hang-glidings/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+//var aeronavaids = L.tileLayer('https://api.tiles.openaip.net/api/data/navaids/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+
+
+//declaring the actual map object and initializing it with default layers
 
 var map = L.map('map', {
 fullscreenControl: true,
 center: [52.2414287, 6.0524422],
     zoom: 14,
-    layers: [osm]
+    layers: [thundertransport, aeromap, aeroreporting_points, aeroairports]
 });
 
+//declaring selection for basemaps and overlaymaps, and which to put in there
+
 var baseMaps = {
-    "VFR map":aeromap,
-    "Map": osm,
-    "Satellite": esrimap
+  "Simple":thundertransport,
+ "Open streetmap": osm,
+ "Satellite": esrimap
+};
+
+var overlayMaps ={
+    "Airspaces": aeromap,
+    "Reporting points":aeroreporting_points,
+"Airfields": aeroairports
 
 };
 
-var layerControl = L.control.layers(baseMaps).addTo(map);
+var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 //leaflet draw controls vanaf hier
 
