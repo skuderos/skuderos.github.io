@@ -187,12 +187,13 @@ var gpsplaneicon = L.icon({
 
 var gps = new L.Control.Gps({
     autoActive:false,
-    autoCenter:false
+    autoCenter:false,
+    marker: new L.Marker([0,0], {icon: gpsplaneicon})
   });//inizialize control
 
   gps
   .on('gps:located', function(e) {
-    e.marker({icon: gpsplaneicon}).bindPopup(e.latlng.toString()).openPopup()
+    e.marker.bindPopup(e.latlng.toString()).openPopup()
     console.log(e.latlng, map.getCenter())
   })
   .on('gps:disabled', function(e) {
