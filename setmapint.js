@@ -32,7 +32,7 @@ var aeroreporting_points = L.tileLayer('https://api.tiles.openaip.net/api/data/r
 
 var aeroairports = L.tileLayer('https://api.tiles.openaip.net/api/data/airports/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
 
-//ongebruikte tiles 
+//ongebruikte tiles
 
 //var aerohotspots = L.tileLayer('https://api.tiles.openaip.net/api/data/hotspots/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
 
@@ -171,4 +171,37 @@ console.log(waypointlatlng);
 // add scale to map
 L.control.scale({ maxWidth: 150 }).addTo(map);
 
+//gps section
+
+var gpsplaneicon = L.icon({
+    iconUrl: 'https://skuderos.github.io/planeicon.png',
+    //shadowUrl: 'leaf-shadow.png',
+
+    iconSize:     [50, 50], // size of the icon
+    //shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [25, 25], // point of the icon which will correspond to marker's location
+    //shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+
+var gps = new L.Control.Gps({
+    autoActive:false,
+    autoCenter:false
+  });//inizialize control
+
+  gps
+  .on('gps:located', function(e) {
+    e.marker({icon: gpsplaneicon}).bindPopup(e.latlng.toString()).openPopup()
+    console.log(e.latlng, map.getCenter())
+  })
+  .on('gps:disabled', function(e) {
+    e.marker.closePopup()
+  });
+
+  gps.addTo(map);
+
+
+
+//end of function setmapint
 }
