@@ -34,6 +34,7 @@ const userdata = [];
 userdata.push(username_guest);
 userdata.push(username_admin);
 userdata.push(username_jordie);
+userdata.push(username_MolnifyMattias);
 
 
 //function that sets the current search key and retrieves the object
