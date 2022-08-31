@@ -21,6 +21,13 @@ accesslevel:"2",
 email: "info@jvfr.nl",
 };
 
+const username_MolnifyMattias = {
+username:"MolnifyMattias",
+hash:"16d9f4f575b294b62ab805f40cfa251cc9ee5013322326dd3aa39de0dd8b9fa1",
+accesslevel:"2",
+email: "hjortzberg@gmail.com",
+};
+
 //creation of combined array and pushing of each object into it
 const userdata = [];
 
