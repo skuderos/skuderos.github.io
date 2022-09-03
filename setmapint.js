@@ -26,22 +26,11 @@ var thundertransport = L.tileLayer('https://b.tile.thunderforest.com/transport/{
 
 //declaring every tile source for openAIP
 
-var aeromap = L.tileLayer('https://api.tiles.openaip.net/api/data/airspaces/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
+var aeromap = L.tileLayer('https://api.tiles.openaip.net/api/data/airspaces/{z}/{x}/{y}.png?apiKey=3908e4def025e3333a153cbe0d23fd76');
 
 var aeroreporting_points = L.tileLayer('https://api.tiles.openaip.net/api/data/reporting-points/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
 
 var aeroairports = L.tileLayer('https://api.tiles.openaip.net/api/data/airports/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
-
-//ongebruikte tiles
-
-//var aerohotspots = L.tileLayer('https://api.tiles.openaip.net/api/data/hotspots/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
-
-//var aeroobstacles = L.tileLayer('https://api.tiles.openaip.net/api/data/obstacles/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
-
-//var aerogliders = L.tileLayer('https://api.tiles.openaip.net/api/data/hang-glidings/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
-
-//var aeronavaids = L.tileLayer('https://api.tiles.openaip.net/api/data/navaids/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
-
 
 //declaring the actual map object and initializing it with default layers
 
