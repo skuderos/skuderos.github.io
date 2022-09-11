@@ -55,6 +55,7 @@ let accesslevellogin=selectedobj.accesslevel;
 if(expectedhash == hashgiven){
       //password is equal
   setValueForVariable("postauthenticationtext", 'TRUE');
+  setValueForVariable("usernamepasted", usernamegiven);
   setValueForVariable("authenticated", 'TRUE');
   setValueForVariable("authentfailed", 'FALSE');
   setValueForVariable("usernotfound", 'FALSE');
