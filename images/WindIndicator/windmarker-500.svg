@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 524.11 524.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e30613;
+      }
+
+      .cls-2 {
+        fill: none;
+        opacity: .5;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: SegoeUI-Bold, 'Segoe UI';
+        font-size: 27.08px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-2" cx="262.06" cy="262.06" r="261.56"/>
+  <g>
+    <rect class="cls-1" x="207.56" y="122.4" width="110.54" height="22.46" rx="1.91" ry="1.91" transform="translate(396.46 -129.19) rotate(90)"/>
+    <text class="cls-3" transform="translate(253.45 93.52) rotate(90)"><tspan x="0" y="0">WIND</tspan></text>
+    <path class="cls-1" d="M264.46,222.78l18.67-32.34c.73-1.26-.18-2.84-1.64-2.84h-37.35c-1.46,0-2.37,1.58-1.64,2.84l18.67,32.34c.73,1.26,2.55,1.26,3.28,0Z"/>
+  </g>
+</svg>
