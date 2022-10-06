@@ -1,0 +1,192 @@
+div.runwaysglobaldiv{
+  aspect-ratio: 3 / 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+    overflow: visible;
+}
+
+div.windindicatordivstylingdeparturetitle{
+  width: 33.333%;
+  height: 80%;
+  left: 0px;
+  position: absolute;
+    overflow: visible;
+}
+
+div.windindicatordivstylingdeparture{
+  width: 100%;
+  height: 95%;
+  left: 0px;
+  position: absolute;
+    overflow: visible;
+
+}
+
+div.windindicatordivstylingdestinationtitle{
+  width: 33.33333%;
+  height: 80%;
+  left: 33.33333%;
+  position: absolute;
+    overflow: visible;
+
+}
+div.windindicatordivstylingdestination{
+  width: 100%;
+  height: 95%;
+  left: 0px;
+  position: absolute;
+    overflow: visible;
+
+}
+
+div.windindicatordivstylingalternatetitle{
+  width: 33.33333%;
+  height: 80%;
+  left: 66.66666%;
+  position: absolute;
+    overflow: visible;
+
+}
+div.windindicatordivstylingalternate{
+  width: 100%;
+  height: 95%;
+  left: 0px;
+  position: absolute;
+    overflow: visible;
+
+}
+.compa{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+  aspect-ratio: 1 / 1;
+    z-index: 10;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+
+}
+.rwya{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 20;
+  aspect-ratio: 1 / 1;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+
+}
+.winda{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+    z-index: 30;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.compb{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+  aspect-ratio: 1 / 1;
+    z-index: 9;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+
+}
+.rwyb{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 19;
+  aspect-ratio: 1 / 1;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+
+}
+.windb{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+    z-index: 29;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.compc{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+  aspect-ratio: 1 / 1;
+    z-index: 8;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+
+}
+.rwyc{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 18;
+  aspect-ratio: 1 / 1;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+
+}
+.windc{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+    z-index: 28;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+
+
+.rwytitletext{
+font-size: 30px;
+  font-weight: bold;
+      overflow: visible;
+}
+.rwyknotsvalue{
+font-size: 25px;
+  font-weight: bold;
+      overflow: visible;
+}
+.rwyknotsword{
+  font-size: 25px;
+  font-weight: bold;
+      overflow: visible;
+}
