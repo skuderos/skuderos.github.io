@@ -1,0 +1,96 @@
+div.runwaysglobaldiv{
+  aspect-ratio: 3 / 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+div.windindicatordivstylingdeparturetitle{
+  width: 32.333%;
+  height: 80%;
+  left: 0px;
+  position: absolute;
+    overflow: hidden;
+}
+
+div.windindicatordivstylingdeparture{
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+    overflow: hidden;
+
+}
+
+div.windindicatordivstylingdestinationtitle{
+  width: 32.333%;
+  height: 80%;
+  left: 33.333%;
+  position: absolute;
+    overflow: hidden;
+
+}
+div.windindicatordivstylingdestination{
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+    overflow: hidden;
+
+}
+
+div.windindicatordivstylingalternatetitle{
+  width: 32.333%;
+  height: 80%;
+  left: 66.666%;
+  position: absolute;
+    overflow: hidden;
+
+}
+div.windindicatordivstylingalternate{
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+    overflow: hidden;
+
+}
+.compa{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+  width: 100%;
+    z-index: 10;
+}
+.rwya{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+  width: 100%;
+    z-index: 20;
+}
+.winda{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+  height: 100%;
+  width: 100%;
+    z-index: 30;
+
+}
+
+.rwytitletext{
+font-size: 30px;
+  font-weight: bold;
+}
+.rwyknotsvalue{
+font-size: 25px;
+  font-weight: bold;
+}
+.rwyknotsword{
+  font-size: 25px;
+  font-weight: bold;
+}
