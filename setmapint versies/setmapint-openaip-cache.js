@@ -13,12 +13,12 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var esrimap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19,
-    attribution: 'ESRI',
+    attribution: 'ESRI'
 });
 
 var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 });
 
 var thundertransport = L.tileLayer('https://b.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=a922d740113b40cf80a36f6aabe5affc'
@@ -26,18 +26,11 @@ var thundertransport = L.tileLayer('https://b.tile.thunderforest.com/transport/{
 
 //declaring every tile source for openAIP
 
-var aeromap = L.tileLayer('https://api.tiles.openaip.net/api/data/airspaces/{z}/{x}/{y}.png?apiKey=3908e4def025e3333a153cbe0d23fd76', {
-crossOrigin: true
-});
+var aeromap = L.tileLayer('https://jvfrtilehostingserver.xyz/ehaa_256/{z}/{x}/{y}.png',{crossOrigin: true});
 
 var aeroreporting_points = L.tileLayer('https://api.tiles.openaip.net/api/data/reporting-points/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
 
 var aeroairports = L.tileLayer('https://api.tiles.openaip.net/api/data/airports/{z}/{x}/{y}.png?apiKey=4210624c80f9b86965249a64adc4b2df');
-
-//test with personal server and cross origin
-var personalmap = L.tileLayer('https://www.jvfrtilehostingserver.xyz/ehaa_256/{z}/{x}/{y}.png', {
-crossOrigin: true
-});
 
 //declaring the actual map object and initializing it with default layers
 
@@ -45,7 +38,7 @@ var map = L.map('map', {
 fullscreenControl: true,
 center: [52.2414287, 6.0524422],
     zoom: 14,
-    layers: [thundertransport, aeromap, aeroreporting_points, aeroairports, personalmap]
+    layers: [thundertransport, aeromap, aeroreporting_points, aeroairports]
 });
 
 //declaring selection for basemaps and overlaymaps, and which to put in there
@@ -59,8 +52,7 @@ var baseMaps = {
 var overlayMaps ={
     "Airspaces": aeromap,
     "Reporting points":aeroreporting_points,
-    "Airfields": aeroairports,
-    "personal map" personalmap
+"Airfields": aeroairports
 
 };
 
