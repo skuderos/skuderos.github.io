@@ -1,0 +1,4 @@
+ik kan mijn eigen gehoste dingen (die van ehaa_256) pakken als ik in leaflet 
+aangeef als optie van de tilelayer dat crossorigin: true is en wijs naar de 
+http versie van de server. Dan heb ik alleen nog 1 probleem: de app
+wil dat alleen doen als hij zelf over http draait, natuurlijk. 
