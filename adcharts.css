@@ -1,0 +1,44 @@
+.buttons_adchart {
+width: 200px;
+margin: 0 auto;
+display: inline;}
+
+  .action_btn_adchart {
+width: 200px;
+margin: 0 auto;
+display: inline;}
+
+.buttonadchart {
+display: inline-block;
+border-radius: 100px;
+background-color: #191532;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 15px;
+padding: 10px;
+width: 180px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+
+.buttonadchart span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.buttonadchart:hover {
+  background-color: #574AAD;
+}
+
+.buttonadchart:hover span:after {
+opacity: 1;
+right: 0;
+}
+.buttonadchart:active {
+background-color: #191532;
+transform: translateY(4px);
+}
