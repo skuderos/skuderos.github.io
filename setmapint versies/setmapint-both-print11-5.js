@@ -188,7 +188,9 @@ var gps = new L.Control.Gps({
   gps
   .on('gps:located', function(e) {
     var currentheadingapi = GeolocationCoordinates.heading;
+    console.log(currentheadingapi);
     e.marker.bindPopup(e.latlng.toString()).openPopup()
+    e.marker.rotate(90)
     console.log(e.latlng, map.getCenter())
   })
   .on('gps:disabled', function(e) {
