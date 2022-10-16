@@ -72,7 +72,11 @@ draw: {
 
 polygon: false,
 rectangle: false,
-marker: false,
+marker: {
+ iconUrl: 'https://skuderos.github.io/images/waypointmarker.png'
+
+
+},
 polyline: {
                 shapeOptions: {
                     color: '#c600d4',
@@ -106,8 +110,6 @@ function createpolylineroute (e){
      waypointlatlng.push(e.layer.getLatLngs());
 
 console.log(waypointlatlng);
-
-L.marker(waypointlatlng, {icon: gpsplaneicon}).addTo(map);
 
 setValueForVariable("waypointcoordinates", waypointlatlng);
 
