@@ -2,7 +2,7 @@ function setmapint(){
 
 //declare waypoint array waar later de coordinaten in geduwd worden
 
-                         const waypointlatlng = []
+ const waypointlatlng = []
 
 //Initialize map with satellite layer and openstreetmap layer, and layercontrol
 
@@ -96,17 +96,18 @@ map.addControl(drawControl);
 
 // functie die daadwerkelijk dingen op de kaart tekent en bij een polyline de coordinaten in een array opslaat
 
-                function gerard (e){
-                console.log('gerard called')
+function createpolylineroute (e){
+                console.log('polyline drawn (gerard)')
 			               var type = e.layerType,
 				layer = e.layer;
 
 			if (type === 'polyline') {
 
-
-                                             waypointlatlng.push(e.layer.getLatLngs());
+     waypointlatlng.push(e.layer.getLatLngs());
 
 console.log(waypointlatlng);
+
+L.marker([51.5, -0.09], {icon: gpsplaneicon}).addTo(map);
 
 setValueForVariable("waypointcoordinates", waypointlatlng);
 
@@ -115,9 +116,9 @@ setValueForVariable("waypointcoordinates", waypointlatlng);
 
 			drawnItems.addLayer(layer);
 
-		}
+}
 
-		map.on('draw:created', gerard);
+		map.on('draw:created', createpolylineroute);
 
 
 map.on('draw:deleted', onlayerdelete);
