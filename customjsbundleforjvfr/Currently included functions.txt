@@ -1,0 +1,12 @@
+setmapintdelay 
+updatewindmarkersdelay 
+confirmairfieldsbutton
+addnewaircraftform
+sendfilesbuttonpressed
+updatewindmarkers
+navlogbutton
+sendcontactbutton
+massbalancebutton
+sendnewaircraftform
+togglepassword
+togglepassword2
