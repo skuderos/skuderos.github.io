@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded",setmapintdelay);
-
 function setmapintdelay(){
 
 setTimeout(setmapint, 6000);
