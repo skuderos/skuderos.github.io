@@ -24,12 +24,19 @@ promise.then(function(deviceOrientation) { // Device Orientation Events are supp
     const element = document.getElementById("currentheadingnumber");
     element.innerHTML = compassHeadingRounded;
 
+    setTimeout(gpsloop, 300);
+
+
+function gpsloop(){
+   //nestling to let the whole function be loopable
+
     // get current location
   if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(getCurrentGpsPosition);
   }
   else {
     console.log("Geolocation is not supported by this browser.");
+  }
   }
 
   function getCurrentGpsPosition(position) {
