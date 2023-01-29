@@ -91,8 +91,7 @@ var brngrounded = Math.round(brgntranslated);
 var maximumDistance = 1.5;   // in km
                   if (maximumDistance > distanceToNextwp) {
                   console.log("waypoint reached");
-                  var waypointsCompletedNew = waypointsCompleted + 1;
-                  var waypointsCompleted = waypointsCompletedNew;
+                  waypointsCompleted++;
                   }
 
                 }
