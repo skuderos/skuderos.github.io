@@ -8,7 +8,7 @@ function initiategpscontrols(map) {
                 popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
             });
 
-            L.marker([51.5, -0.09], {icon: aircraftmarkerpng}).addTo(setmapint.map);
+          var locationmarker =  L.marker([51.5, -0.09], {icon: aircraftmarkerpng}).addTo(setmapint.map);
 
   //declare counting variable that keeps track of which waypoint is Activate
 var waypointsCompleted = 0;
