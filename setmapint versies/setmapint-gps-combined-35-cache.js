@@ -342,8 +342,6 @@ else{
 //does nothing, except skip the try block if there is no route selected
 }
 
-finally{
-
 //updating the current aircraft marker
   locationmarker.setRotationAngle(compassHeadingRounded)
   locationmarker.setLatLng(LatLngcurrentgps);
@@ -357,7 +355,7 @@ var maximumDistance = 1.5;   // in km
                 waypointsCompleted++;
                 }
 
-} //end of finally
+
 
 //end of getCurrentGpsPosition
               }
